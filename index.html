@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Rockwell;
+        }
+        kbd, p {
+            font-size: 50px;
+        }
+        kbd {
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        img {
+            height: 150px;
+            width: 140px;
+        }
+        a {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #audiowideFont {
+            font-family: 'Audiowide', sans-serif;
+        }
+        .btn-primary {
+            background-color: #ADEBB3;
+            border-color: #ADEBB3;
+            color: black;
+        }
+        .btn-success {
+            background-color: #95CADB;
+            border-color: #95CADB;
+        }
+        .btn-warning {
+            background-color: #FFEE8C;
+            border-color: #FFEE8C;
+            color: black;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+
+<body class="text-light" style="background-color: #9A7B4F;">
+    <div class="container">
+        <!-- Page Heading -->
+        <center>
+            <img src="https://media4.giphy.com/media/gulXBo07CiPIK57OT1/giphy.gif?cid=6c09b95282yss9ti3rcwbvya38xo7qh2ctiinr3c105m14hd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s">
+            <h2 id="audiowideFont">PHP Currency Converter</h2>
+            <kbd id="amount"></kbd>
+        </center>
+        <!-- Main Content -->
+        <div class="col-md-12 text-center">
+            <p id="display">Convert PHP to selected currencies.</p>
+            <button id="audiowideFont" type="button" class="btn btn-primary" 
+                onclick="
+                    var php = 100; // Initial PHP value
+                    var euro = 1.64; // Conversion rate to Euro
+                    document.getElementById('display').innerHTML = '<kbd>' + php / euro + '</kbd>'; // Display result
+                ">
+                Euro
+            </button>
+            <button id="audiowideFont" type="button" class="btn btn-warning" 
+                onclick="
+                    var php = 100; // Initial PHP value
+                    var yen = 267.84; // Conversion rate to Yen
+                    document.getElementById('display').innerHTML = '<kbd>' + php / yen + '</kbd>'; // Display result
+                ">
+                Yen
+            </button>
+        </div>
+        <!-- Refresh Button -->
+        <div class="text-center mt-4">
+            <a href="index.html">
+                <button class="btn btn-success btn-lg">Refresh</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Initial PHP value
+        var php = 100;
+        // Display PHP amount dynamically
+        document.getElementById("amount").textContent = php; 
+    </script>
+</body>
+</html>
